@@ -43,6 +43,7 @@ button {
 }
     #sixth {
         display: flex;
+        flex: 0.5;
     }
 
     #zero {
