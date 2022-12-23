@@ -4,8 +4,8 @@
     background-color: #000;
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
-    border-radius: 6px;
+    border: 8px solid #000;
+    border-radius: 30px;
     padding: 4px;
 }
 
@@ -14,16 +14,19 @@
     display: flex;
     max-height: 16.666%;
 }
+#screen {
+    display: flex;
+    min-height: 115px;
+}
 
 #first {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    flex: 5;
-    /* min-height: 100px; */
+    align-items: center;
+    padding: 4px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 64px;
 }
 
 button {
@@ -31,7 +34,7 @@ button {
     flex: 1;
     display: flex;
     border: 1px solid rgb(44, 44, 44);
-    /* border-radius: 50%; */
+    border-radius: 50%;
     margin: 4px;
     background-color: rgb(44, 44, 44);
     justify-content: center;
@@ -42,16 +45,18 @@ button {
     padding: 0;
 }
     #sixth {
-        display: flex;
-        flex: 0.5;
+        max-height: 75px;
     }
 
     #zero {
-        flex:2;
+        border-radius: 50px;
+        justify-content: flex-start;
+        padding-left: 25px;
     }
 
     #point, #equal {
-        flex:1;
+        max-height: 67px;
+        max-width: 67px;
     }
 
     #C, #AC, #plus-minus {
