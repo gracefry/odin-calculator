@@ -14,6 +14,13 @@ function divide(a, b) {
     return (a / b);
 }
 
+function reset() {
+    a = "";
+    b = "";
+    operator = "";
+    screen.textContent = "";
+}
+
 function operate(operator, a, b) {
     switch(operator) {
         case "+":
@@ -37,6 +44,8 @@ const numbers = document.querySelectorAll(".num");
 const operators = document.querySelectorAll(".operator");
 const screen = document.querySelector("#screen");
 const equals = document.querySelector("#equal");
+const allClear = document.querySelector("#AC");
+const clear = document.querySelector("#C");
 
 numbers.forEach(button => button.addEventListener('click', (e) => {
     screen.textContent += e.target.textContent;
@@ -50,6 +59,12 @@ operators.forEach(button => button.addEventListener('click', (e) => {
     operator = e.target.textContent;
 }));
 
+allClear.addEventListener('click', (e) => reset());
+
+clear.addEventListener('click', (e) => {
+    screen.textContent = "";
+})
+
 equals.addEventListener('click', (e) => {
     if (b == "") {
         b = screen.textContent;
@@ -59,8 +74,5 @@ equals.addEventListener('click', (e) => {
     let result = operate(operator, a, b);
     screen.textContent = result;
 
-    // Reset
-    a = "";
-    b = "";
-    operator = "";
+    clear();
 })
