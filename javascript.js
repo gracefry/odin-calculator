@@ -43,11 +43,11 @@ numbers.forEach(button => button.addEventListener('click', (e) => {
 }));
 
 operators.forEach(button => button.addEventListener('click', (e) => {
-    if (screen.textContent != "" && a == "") {
+    if (a == "") {
         a = screen.textContent;
-        screen.textContent = "";
-        operator = e.target.textContent;     
+        screen.textContent = "";  
     }
+    operator = e.target.textContent;
 }));
 
 equals.addEventListener('click', (e) => {
@@ -57,7 +57,7 @@ equals.addEventListener('click', (e) => {
     }
 
     let result = operate(operator, a, b);
-    console.log(result);
+    screen.textContent = result;
 
     // Reset
     a = "";
